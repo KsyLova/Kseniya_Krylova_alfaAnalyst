@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>TOP HOTELS</title>
+</head>
+<body>
+<div th:each="hotel : ${hotelList}">
+    <a th:href="@{/hotelList/{id}(id=${hotel.getId()})}" th:text="${hotel.getName()}">hotel</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel</title>
+</head>
+<body>
+<p th:text="${hotel.getName()}">value</p>
+<p th:text="${hotel.getId()}">value</p>
+<a th:href="@{/hotelList/{id}/edit(id=${hotel.getId()})}">Edit</a>
+<form th:method="POST" th:action="@{/hotelList/{id}(id=${hotel.getId()})}">
+    <input type="submit" value="DELETE!">
+</form>
+</body>
+</html>
